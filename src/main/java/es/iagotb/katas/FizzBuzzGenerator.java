@@ -58,7 +58,7 @@ public class FizzBuzzGenerator {
 	public String sayFizzBuzz(Integer numero) {
 		if (isFizzAndBuzz(numero))
 		{
-			return FIZZ+BUZZ;
+			return FIZZ+BUZZ+"?";
 		}
 		else if (isFizz(numero))
 		{
