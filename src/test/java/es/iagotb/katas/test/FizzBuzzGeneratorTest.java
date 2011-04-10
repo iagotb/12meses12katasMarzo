@@ -80,9 +80,9 @@ public class FizzBuzzGeneratorTest{
 		assertEquals("Buzz",juego.sayFizzBuzz(5));
 		assertEquals("Buzz",juego.sayFizzBuzz(10));
 		assertEquals("Buzz",juego.sayFizzBuzz(59));
-		assertEquals("FizzBuzz",juego.sayFizzBuzz(35));
-		assertEquals("FizzBuzz",juego.sayFizzBuzz(15));
-		assertEquals("FizzBuzz",juego.sayFizzBuzz(55333555));
+		assertEquals("FizzBuzz?",juego.sayFizzBuzz(35));
+		assertEquals("FizzBuzz?",juego.sayFizzBuzz(15));
+		assertEquals("FizzBuzz?",juego.sayFizzBuzz(55333555));
 		
 		
 	}
