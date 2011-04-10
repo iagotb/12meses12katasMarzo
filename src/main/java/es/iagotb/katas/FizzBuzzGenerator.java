@@ -2,6 +2,8 @@ package es.iagotb.katas;
 
 public class FizzBuzzGenerator {
 	
+	private static final String BUZZ = "Buzz";
+	private static final String FIZZ = "Fizz";
 	private int segundo_numero;
 	private int primer_numero;
 
@@ -44,21 +46,30 @@ public class FizzBuzzGenerator {
 		FizzBuzzGenerator juego = new FizzBuzzGenerator(5,3);
 		for (int i = 1; i <= 100; i++) 
 		{
-			if (juego.isFizzAndBuzz(i))
-			{
-				System.out.println("FizzBuzz");
-			}
-			else if (juego.isFizz(i))
-			{
-				System.out.println("Fizz");
-			}
-			else if (juego.isBuzz(i))
-			{
-				System.out.println("Buzz");
-			}
-			else
-			System.out.println(i);
+			System.out.println(juego.sayFizzBuzz(i));
 		}
+	}
+
+
+	/**
+	 * @param juego
+	 * @param numero
+	 */
+	public String sayFizzBuzz(Integer numero) {
+		if (isFizzAndBuzz(numero))
+		{
+			return FIZZ+BUZZ;
+		}
+		else if (isFizz(numero))
+		{
+			return FIZZ;
+		}
+		else if (isBuzz(numero))
+		{
+			return BUZZ;
+		}
+		else
+		return numero.toString();
 	}
 
 	/*
@@ -67,7 +78,7 @@ public class FizzBuzzGenerator {
 	private boolean tieneNumero(Integer numero, Integer i) {
 		// TODO Auto-generated method stub
 		String numero_string = numero.toString();
-		if (numero_string.indexOf(i.toString()) != -1)
+		if (numero_string.contains(i.toString()))
 			return true;
 		else return false;
 	}
